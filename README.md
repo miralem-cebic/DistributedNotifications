@@ -6,7 +6,7 @@ One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
 
 The second daemon is running in the background as a LaunchDaemon.
 
-The is that the two daemons communicate trouth Notification with each other.
+The goal is that the two daemons communicate trouth Notification with each other.
 Also the first Daemon should display a UI in OS X Login Window.
 
 ## How To Build
