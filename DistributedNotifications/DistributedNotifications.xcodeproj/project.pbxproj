@@ -24,6 +24,7 @@
 		E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */; };
 		E7FDE5E61C6DEE1D000DCEB0 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */; };
 		E7FDE5EA1C6E0A42000DCEB0 /* Daemon.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */; };
+		E7FDE5F11C6E0E9C000DCEB0 /* uninstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,10 @@
 		E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Panel.m; path = Panel/Panel.m; sourceTree = "<group>"; };
 		E7FDE5E81C6E0A42000DCEB0 /* Daemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Daemon.h; path = Daemon/Daemon.h; sourceTree = "<group>"; };
 		E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Daemon.m; path = Daemon/Daemon.m; sourceTree = "<group>"; };
+		E7FDE5EB1C6E0D62000DCEB0 /* de.miralem-cebic.launchagent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "de.miralem-cebic.launchagent.plist"; path = "Install/de.miralem-cebic.launchagent.plist"; sourceTree = "<group>"; };
+		E7FDE5EE1C6E0D88000DCEB0 /* de.miralem-cebic.launchdaemon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "de.miralem-cebic.launchdaemon.plist"; path = "Install/de.miralem-cebic.launchdaemon.plist"; sourceTree = "<group>"; };
+		E7FDE5EF1C6E0E8F000DCEB0 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = install.sh; path = Install/install.sh; sourceTree = "<group>"; };
+		E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = uninstall.sh; path = Install/uninstall.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 		E7FDE5891C6DE080000DCEB0 = {
 			isa = PBXGroup;
 			children = (
+				E7FDE5ED1C6E0D70000DCEB0 /* Install */,
 				E7FDE5DE1C6DE9C7000DCEB0 /* Frameworks */,
 				E7FDE5AB1C6DE0FD000DCEB0 /* LaunchAgent-Daemon */,
 				E7FDE5C01C6DE119000DCEB0 /* LaunchDaemon-Daemon */,
@@ -193,6 +199,17 @@
 			name = Panel;
 			sourceTree = "<group>";
 		};
+		E7FDE5ED1C6E0D70000DCEB0 /* Install */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE5EB1C6E0D62000DCEB0 /* de.miralem-cebic.launchagent.plist */,
+				E7FDE5EE1C6E0D88000DCEB0 /* de.miralem-cebic.launchdaemon.plist */,
+				E7FDE5EF1C6E0E8F000DCEB0 /* install.sh */,
+				E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */,
+			);
+			name = Install;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +303,7 @@
 				E7FDE5C81C6DE119000DCEB0 /* Assets.xcassets in Resources */,
 				E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */,
 				E7FDE5CB1C6DE119000DCEB0 /* MainMenu.xib in Resources */,
+				E7FDE5F11C6E0E9C000DCEB0 /* uninstall.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

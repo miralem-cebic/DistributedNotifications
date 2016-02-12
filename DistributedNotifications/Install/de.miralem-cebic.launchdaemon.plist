@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>de.miralem-cebic.launchdaemon</string>
+        <key>KeepAlive</key>
+        <true/>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/Library/Application Support/MCC-DistributedNotifications/LaunchDaemon-Daemon.app/Contents/MacOS/LaunchDaemon-Daemon</string>
+        </array>
+        <key>GroupName</key>
+        <string>wheel</string>
+        <key>UserName</key>
+        <string>root</string>
+    </dict>
+</plist>
