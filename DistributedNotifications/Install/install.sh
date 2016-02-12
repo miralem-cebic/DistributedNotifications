@@ -50,6 +50,11 @@ echo "--> Can not find: de.miralem-cebic.launchdaemon.plist in: $CURRENTDIR"
 exit 23
 fi
 
+sudo chmod 644 "$CURRENTDIR/de.miralem-cebic.launchagent.plist"
+sudo chown root:wheel "$CURRENTDIR/de.miralem-cebic.launchagent.plist"
+
+sudo chmod 644 "$CURRENTDIR/de.miralem-cebic.launchdaemon.plist"
+sudo chown root:wheel "$CURRENTDIR/de.miralem-cebic.launchdaemon.plist"
 
 echo "\n"
 echo "--------------"
@@ -66,6 +71,9 @@ then
 echo "--> Can not find: LaunchDaemon-Daemon.app in: $CURRENTDIR"
 exit 33
 fi
+
+sudo chmod 755 "$CURRENTDIR/LaunchAgent-Daemon.app/Contents/MacOS/LaunchAgent-Daemon"
+sudo chmod 755 "$CURRENTDIR/LaunchDaemon-Daemon.app/Contents/MacOS/LaunchDaemon-Daemon"
 
 echo "\n"
 echo "--------------"
@@ -86,7 +94,22 @@ echo "--------------"
 echo "->STARTING AGENTS"
 
 sudo launchctl load -w "/Library/LaunchAgents/de.miralem-cebic.launchagent.plist"
-sudo launchctl load -w "/Library/LaunchDaemons/de.miralem-cebic.launchdaemon.plist"
+if [ "$?" = "0" ]; then
+sudo launchctl load -w "/Library/LaunchAgents/de.miralem-cebic.launchagent.plist"
+else
+echo "Could not load de.miralem-cebic.launchagent.plist with launchctl." 1>&2
+"$CURRENTDIR/uninstall.sh"
+exit 42
+fi
+
+sudo launchctl load -w "sudo launchctl load -w /Library/LaunchDaemons/de.miralem-cebic.launchdaemon.plist"
+if [ "$?" = "0" ]; then
+sudo launchctl load -w "sudo launchctl load -w /Library/LaunchDaemons/de.miralem-cebic.launchdaemon.plist"
+else
+echo "Could not load de.miralem-cebic.launchdaemon.plist with launchctl." 1>&2
+"$CURRENTDIR/uninstall.sh"
+exit 43
+fi
 
 echo "\n"
 echo "--------------"
