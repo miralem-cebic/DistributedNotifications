@@ -1,6 +1,6 @@
 # Distributed Notifications
 ![MacDown logo](DistributedNotifications/LaunchAgent-Daemon/Images/AppIcon.icns)
-![MacDown logo](DistributedNotifications/LaunchDaemon-Daemon/Images/AppIcon.icns)
+![MacDown logo](DistributedNotifications/LaunchDaemon-Daemon/images/AppIcon.icns)
 This project running two daemons on OS X. 
 
 One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
