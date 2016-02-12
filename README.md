@@ -1,5 +1,5 @@
 # Distributed Notifications
-Is project running two daemons on OS X. 
+This project running two daemons on OS X. 
 
 One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
 
@@ -22,6 +22,10 @@ There is also a DaemonAggregator Scheme.
 Build the project using the Aggregator Scheme names *Daemons-Aggregater* to keep it simple.
 
 The Result of the Build will be generated on your Dektop, by a build phases script in the Aggregator Scheme.
+
+After the Xcode build navigate to your Desktop. You will find a new directory, named *Daemon-Builds*. In this dir you can execute the *install.sh* script by `sudo /bin/sh install.sh`.
+
+It will automaticly install the Agents and run them up.
 
 ## DistributedNotifications
 Distributed Notifications using Core Foundation API: **CFNotificationCenterGetDistributedCenter** 
