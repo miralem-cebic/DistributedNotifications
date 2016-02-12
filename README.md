@@ -1,7 +1,6 @@
 # Distributed Notifications
-![MacDown logo](DistributedNotifications/LaunchAgent-Daemon/Images/AppIcon.icns)
-![MacDown logo](DistributedNotifications/LaunchDaemon-Daemon/images/AppIcon.icns)
-This project running two daemons on OS X. 
+![MacDown logo](DistributedNotifications/LaunchAgent-Daemon/Assets.xcassets/AppIcon.appiconset/Icon_128x128.png)
+![MacDown logo](DistributedNotifications/LaunchDaemon-Daemon/Assets.xcassets/AppIcon.appiconset/Icon_128x128.png)
 
 One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
 
@@ -10,7 +9,7 @@ The second daemon is running in the background as a LaunchDaemon.
 The is that the two daemons communicate trouth Notification with each other.
 Also the first Daemon should display a UI in OS X Login Window.
 
-##How To Build
+## How To Build
 Clone the project on a OS X 10.11 machine via terminal `git clone https://github.com/RabbitMC/DistributedNotifications.git`.
 
 Open *DistributedNotifications.xcodeproj*
@@ -81,7 +80,7 @@ Of all of the ways to link up two applications, distributed notifications are by
 source: <br />
 [nshipster - inter-process-communication](http://nshipster.com/inter-process-communication/)
 
-###Other References
+### Other References
 
 * [Apple PreLoginAgents](https://developer.apple.com/library/mac/samplecode/PreLoginAgents/Introduction/Intro.html#//apple_ref/doc/uid/DTS10004414)
 * [Apple SampleD](https://developer.apple.com/library/mac/samplecode/SampleD/Introduction/Intro.html)
