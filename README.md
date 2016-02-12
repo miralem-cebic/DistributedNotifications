@@ -1,0 +1,2 @@
+# DistributedNotifications
+Distributed Notifications using Core Foundation API: CFNotificationCenterGetDistributedCenter 
