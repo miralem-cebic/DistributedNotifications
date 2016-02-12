@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "LogManager.h"
+#import "Daemon.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) Daemon *daemon;
 @property (weak) IBOutlet NSWindow *window;
 @end
 
@@ -17,10 +19,41 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    [[LogManager sharedManager] logWithFormat:@"Did finish launching begin"];
+    _daemon = [Daemon new];
+    [self addCFNotificationCenterObserver];
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+- (void)applicationWillTerminate:(NSNotification *)note
+{
+    [[LogManager sharedManager] logWithFormat:@"Will terminate"];
+}
+
+static void Callback(CFNotificationCenterRef center,
+                     void *observer,
+                     CFStringRef name,
+                     const void *object,
+                     CFDictionaryRef userInfo)
+{
+    [[LogManager sharedManager] logWithFormat:@"Recieved Notification from LaunchAgent"];
+
+    AppDelegate *delegate = [NSApplication sharedApplication].delegate;
+    Daemon *daemon = delegate->_daemon;
+    NSDictionary *userInfoDict = (__bridge NSDictionary *)userInfo;
+    [daemon showAboutEmpirumAgentInformation];
+
+}
+
+- (void)addCFNotificationCenterObserver
+{
+    CFNotificationCenterRef distributedCenter = CFNotificationCenterGetDistributedCenter();
+    CFNotificationSuspensionBehavior behavior = CFNotificationSuspensionBehaviorDeliverImmediately;
+    CFNotificationCenterAddObserver(distributedCenter,
+                                    NULL,
+                                    Callback,
+                                    CFSTR("kLaunchAgentShowAboutWindow.miralem-cebic.de"),
+                                    NULL,
+                                    behavior);
 }
 
 @end

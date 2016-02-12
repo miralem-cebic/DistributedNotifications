@@ -48,8 +48,16 @@
 {
     [[LogManager sharedManager] logWithFormat:@"Clicked: 'About'"];
     [[LogManager sharedManager] logWithFormat:@"Sending Notification to LaunchDaemon ... "];
-    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"kLaunchAgentShowAboutWindow"
-                                                                   object:nil userInfo:nil deliverImmediately:YES];
+
+    void *object;
+    CFDictionaryRef userInfo;
+
+    CFNotificationCenterRef distributedCenter = CFNotificationCenterGetDistributedCenter();
+    CFNotificationCenterPostNotification(distributedCenter,
+                                         CFSTR("kLaunchAgentShowAboutWindow.miralem-cebic.de"),
+                                         object,
+                                         userInfo,
+                                         true);
 }
 
 - (IBAction)pressDoSomething:(NSMenuItem *)sender

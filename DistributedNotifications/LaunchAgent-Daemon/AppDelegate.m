@@ -35,7 +35,7 @@ static void Callback(CFNotificationCenterRef center,
                      const void *object,
                      CFDictionaryRef userInfo)
 {
-    [[LogManager sharedManager] logWithFormat:@"Recieved Notification from LaunchAgent"];
+    [[LogManager sharedManager] logWithFormat:@"Recieved Notification from LaunchDeamon"];
 
     AppDelegate *delegate = [NSApplication sharedApplication].delegate;
     Panel *panel = delegate->_panel;
@@ -51,7 +51,7 @@ static void Callback(CFNotificationCenterRef center,
     CFNotificationCenterAddObserver(distributedCenter,
                                     NULL,
                                     Callback,
-                                    CFSTR("notification.identifier"),
+                                    CFSTR("kLaunchAgentShowAboutWindowNOW.miralem-cebic.de"),
                                     NULL,
                                     behavior);
 }

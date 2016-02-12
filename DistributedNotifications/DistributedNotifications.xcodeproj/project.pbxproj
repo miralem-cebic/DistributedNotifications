@@ -23,6 +23,7 @@
 		E7FDE5E01C6DEBD9000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5DF1C6DEBD9000DCEB0 /* AppIcon.icns */; };
 		E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */; };
 		E7FDE5E61C6DEE1D000DCEB0 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */; };
+		E7FDE5EA1C6E0A42000DCEB0 /* Daemon.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		E7FDE5E41C6DEE1D000DCEB0 /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Panel.h; path = Panel/Panel.h; sourceTree = "<group>"; };
 		E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Panel.m; path = Panel/Panel.m; sourceTree = "<group>"; };
+		E7FDE5E81C6E0A42000DCEB0 /* Daemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Daemon.h; path = Daemon/Daemon.h; sourceTree = "<group>"; };
+		E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Daemon.m; path = Daemon/Daemon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 			children = (
 				E7FDE5C11C6DE119000DCEB0 /* AppDelegate.h */,
 				E7FDE5C21C6DE119000DCEB0 /* AppDelegate.m */,
+				E7FDE5E81C6E0A42000DCEB0 /* Daemon.h */,
+				E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */,
 				E7FDE5E11C6DEC0D000DCEB0 /* images */,
 				E7FDE5C71C6DE119000DCEB0 /* Assets.xcassets */,
 				E7FDE5C91C6DE119000DCEB0 /* MainMenu.xib */,
@@ -306,6 +311,7 @@
 				E7FDE5DD1C6DE6FE000DCEB0 /* LogManager.m in Sources */,
 				E7FDE5C61C6DE119000DCEB0 /* main.m in Sources */,
 				E7FDE5C31C6DE119000DCEB0 /* AppDelegate.m in Sources */,
+				E7FDE5EA1C6E0A42000DCEB0 /* Daemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
