@@ -32,15 +32,14 @@
 		E7FDE5C81C6DE119000DCEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5C71C6DE119000DCEB0 /* Assets.xcassets */; };
 		E7FDE5CB1C6DE119000DCEB0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5C91C6DE119000DCEB0 /* MainMenu.xib */; };
 		E7FDE5D21C6DE3A0000DCEB0 /* StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5D11C6DE3A0000DCEB0 /* StatusBar.m */; };
-		E7FDE5D71C6DE4D4000DCEB0 /* launch-daemon-18x18.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5D51C6DE4D4000DCEB0 /* launch-daemon-18x18.png */; };
-		E7FDE5D81C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5D61C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png */; };
 		E7FDE5DC1C6DE6F8000DCEB0 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5DB1C6DE6F8000DCEB0 /* LogManager.m */; };
 		E7FDE5DD1C6DE6FE000DCEB0 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5DB1C6DE6F8000DCEB0 /* LogManager.m */; };
-		E7FDE5E01C6DEBD9000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5DF1C6DEBD9000DCEB0 /* AppIcon.icns */; };
 		E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */; };
 		E7FDE5E61C6DEE1D000DCEB0 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */; };
 		E7FDE5EA1C6E0A42000DCEB0 /* Daemon.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */; };
 		E7FDE5F11C6E0E9C000DCEB0 /* uninstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */; };
+		E7FDE6041C6E596E000DCEB0 /* launch-daemon-18x18.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE6011C6E596E000DCEB0 /* launch-daemon-18x18.png */; };
+		E7FDE6051C6E596E000DCEB0 /* launch-daemon-18x18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE6021C6E596E000DCEB0 /* launch-daemon-18x18@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,11 +76,8 @@
 		E7FDE5CC1C6DE119000DCEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FDE5D01C6DE3A0000DCEB0 /* StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusBar.h; path = StatusBar/StatusBar.h; sourceTree = "<group>"; };
 		E7FDE5D11C6DE3A0000DCEB0 /* StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusBar.m; path = StatusBar/StatusBar.m; sourceTree = "<group>"; };
-		E7FDE5D51C6DE4D4000DCEB0 /* launch-daemon-18x18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-daemon-18x18.png"; sourceTree = "<group>"; };
-		E7FDE5D61C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-daemon-18x18@2x.png"; sourceTree = "<group>"; };
 		E7FDE5DA1C6DE6F8000DCEB0 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
 		E7FDE5DB1C6DE6F8000DCEB0 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
-		E7FDE5DF1C6DEBD9000DCEB0 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		E7FDE5E41C6DEE1D000DCEB0 /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Panel.h; path = Panel/Panel.h; sourceTree = "<group>"; };
 		E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Panel.m; path = Panel/Panel.m; sourceTree = "<group>"; };
@@ -91,6 +87,8 @@
 		E7FDE5EE1C6E0D88000DCEB0 /* de.miralem-cebic.launchdaemon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "de.miralem-cebic.launchdaemon.plist"; path = "Install/de.miralem-cebic.launchdaemon.plist"; sourceTree = "<group>"; };
 		E7FDE5EF1C6E0E8F000DCEB0 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = install.sh; path = Install/install.sh; sourceTree = "<group>"; };
 		E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = uninstall.sh; path = Install/uninstall.sh; sourceTree = "<group>"; };
+		E7FDE6011C6E596E000DCEB0 /* launch-daemon-18x18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-daemon-18x18.png"; sourceTree = "<group>"; };
+		E7FDE6021C6E596E000DCEB0 /* launch-daemon-18x18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-daemon-18x18@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,11 +132,11 @@
 		E7FDE5AB1C6DE0FD000DCEB0 /* LaunchAgent-Daemon */ = {
 			isa = PBXGroup;
 			children = (
+				E7FDE5FF1C6E596E000DCEB0 /* Images */,
 				E7FDE5AC1C6DE0FD000DCEB0 /* AppDelegate.h */,
 				E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */,
 				E7FDE5E71C6DEE22000DCEB0 /* Panel */,
 				E7FDE5D31C6DE3A3000DCEB0 /* Status Bar */,
-				E7FDE5D41C6DE4D4000DCEB0 /* Imgages */,
 				E7FDE5B21C6DE0FD000DCEB0 /* Assets.xcassets */,
 				E7FDE5B41C6DE0FD000DCEB0 /* MainMenu.xib */,
 				E7FDE5B71C6DE0FD000DCEB0 /* Info.plist */,
@@ -188,16 +186,6 @@
 			name = "Status Bar";
 			sourceTree = "<group>";
 		};
-		E7FDE5D41C6DE4D4000DCEB0 /* Imgages */ = {
-			isa = PBXGroup;
-			children = (
-				E7FDE5DF1C6DEBD9000DCEB0 /* AppIcon.icns */,
-				E7FDE5D51C6DE4D4000DCEB0 /* launch-daemon-18x18.png */,
-				E7FDE5D61C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png */,
-			);
-			path = Imgages;
-			sourceTree = "<group>";
-		};
 		E7FDE5D91C6DE6F8000DCEB0 /* LogManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +229,15 @@
 				E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */,
 			);
 			name = Install;
+			sourceTree = "<group>";
+		};
+		E7FDE5FF1C6E596E000DCEB0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE6011C6E596E000DCEB0 /* launch-daemon-18x18.png */,
+				E7FDE6021C6E596E000DCEB0 /* launch-daemon-18x18@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,11 +322,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7FDE5E01C6DEBD9000DCEB0 /* AppIcon.icns in Resources */,
 				E7FDE5B31C6DE0FD000DCEB0 /* Assets.xcassets in Resources */,
-				E7FDE5D71C6DE4D4000DCEB0 /* launch-daemon-18x18.png in Resources */,
-				E7FDE5D81C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png in Resources */,
+				E7FDE6041C6E596E000DCEB0 /* launch-daemon-18x18.png in Resources */,
 				E7FDE5B61C6DE0FD000DCEB0 /* MainMenu.xib in Resources */,
+				E7FDE6051C6E596E000DCEB0 /* launch-daemon-18x18@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
