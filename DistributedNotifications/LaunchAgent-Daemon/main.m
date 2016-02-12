@@ -65,7 +65,7 @@ int main(int argc, const char * argv[]) {
 
     
     WaitForWindowServerSession();
-    InstallHandleSIGTERMFromRunLoop();
+    //InstallHandleSIGTERMFromRunLoop();
 
 
     [[LogManager sharedManager] logWithFormat:@"Starting LaunchAgent-Daemon Cocoa application"];

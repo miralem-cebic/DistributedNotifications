@@ -9,6 +9,7 @@
 #import "StatusBar.h"
 #import <Cocoa/Cocoa.h>
 #import "LogManager.h"
+#include <CoreFoundation/CoreFoundation.h>
 
 @interface StatusBar()
 @property (nonatomic, strong) NSStatusItem *statusItem;
@@ -40,8 +41,6 @@
     self.statusItem.menu = self.statusMenu;
     self.statusItem.highlightMode = YES;
     self.statusItem.image = statusImage;
-
-    return;
 }
 
 - (IBAction)pressAbout:(NSMenuItem *)sender
@@ -49,15 +48,9 @@
     [[LogManager sharedManager] logWithFormat:@"Clicked: 'About'"];
     [[LogManager sharedManager] logWithFormat:@"Sending Notification to LaunchDaemon ... "];
 
-    void *object;
-    CFDictionaryRef userInfo;
+    CFNotificationCenterRef center = CFNotificationCenterGetLocalCenter();
 
-    CFNotificationCenterRef distributedCenter = CFNotificationCenterGetDistributedCenter();
-    CFNotificationCenterPostNotification(distributedCenter,
-                                         CFSTR("kLaunchAgentShowAboutWindow.miralem-cebic.de"),
-                                         object,
-                                         userInfo,
-                                         true);
+    CFNotificationCenterPostNotification(center, CFSTR("kLaunchAgentShowAboutWindow.miralem-cebic.de"), NULL, NULL, TRUE);
 }
 
 - (IBAction)pressDoSomething:(NSMenuItem *)sender

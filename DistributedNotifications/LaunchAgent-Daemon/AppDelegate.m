@@ -44,16 +44,28 @@ static void Callback(CFNotificationCenterRef center,
     [panel showAboutWindowWithInformation:userInfoDict];
 }
 
+void notificationCallback (CFNotificationCenterRef center,
+                           void * observer,
+                           CFStringRef name,
+                           const void * object,
+                           CFDictionaryRef userInfo) {
+
+    [[LogManager sharedManager] logWithFormat:@"Recieved Notification from LaunchDeamon"];
+
+    AppDelegate *delegate = [NSApplication sharedApplication].delegate;
+    Panel *panel = delegate->_panel;
+    NSDictionary *userInfoDict = (__bridge NSDictionary *)userInfo;
+
+    [panel showAboutWindowWithInformation:userInfoDict];
+}
+
 - (void)addCFNotificationCenterObserver
 {
-    CFNotificationCenterRef distributedCenter = CFNotificationCenterGetDistributedCenter();
-    CFNotificationSuspensionBehavior behavior = CFNotificationSuspensionBehaviorDeliverImmediately;
-    CFNotificationCenterAddObserver(distributedCenter,
-                                    NULL,
-                                    Callback,
-                                    CFSTR("kLaunchAgentShowAboutWindowNOW.miralem-cebic.de"),
-                                    NULL,
-                                    behavior);
+    CFNotificationCenterRef center = CFNotificationCenterGetLocalCenter();
+    // add an observer
+    CFNotificationCenterAddObserver(center, NULL, notificationCallback,
+                                    CFSTR("kLaunchAgentShowAboutWindowNOW.miralem-cebic.de"), NULL,
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
 }
 
 @end
