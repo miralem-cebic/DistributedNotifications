@@ -1,4 +1,29 @@
-# DistributedNotifications
+# Distributed Notifications
+Is project running two daemons on OS X. 
+
+One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
+
+The second daemon is running in the background as a LaunchDaemon.
+
+The is that the two daemons communicate trouth Notification with each other.
+Also the first Daemon should display a UI in OS X Login Window.
+
+##How To Build
+Clone the project on a OS X 10.11 machine via terminal `git clone https://github.com/RabbitMC/DistributedNotifications.git`.
+
+Open *DistributedNotifications.xcodeproj*
+You will get two Targets: 
+
+* LaunchAgent-Daemon
+* LaunchDaemon-Daemon
+
+There is also a DaemonAggregator Scheme.
+
+Build the project using the Aggregator Scheme names *Daemons-Aggregater* to keep it simple.
+
+The Result of the Build will be generated on your Dektop, by a build phases script in the Aggregator Scheme.
+
+## DistributedNotifications
 Distributed Notifications using Core Foundation API: **CFNotificationCenterGetDistributedCenter** 
 
 There are many ways for objects to communicate with one another in Cocoa:
@@ -47,4 +72,13 @@ Sending a distributed notification is even simpler; just post the identifier, ob
 
 Of all of the ways to link up two applications, distributed notifications are by far the easiest. It wouldn’t be a great idea to use them to send large payloads, but for simple tasks like synchronizing preferences or triggering a data fetch, distributed notifications are perfect.
 
-[source: nshipster - inter-process-communication](http://nshipster.com/inter-process-communication/)
+source: <br />
+[nshipster - inter-process-communication](http://nshipster.com/inter-process-communication/)
+
+###Other References
+
+* [Apple PreLoginAgents](https://developer.apple.com/library/mac/samplecode/PreLoginAgents/Introduction/Intro.html#//apple_ref/doc/uid/DTS10004414)
+* [Apple SampleD](https://developer.apple.com/library/mac/samplecode/SampleD/Introduction/Intro.html)
+* [Apple TN2083 'Daemons and Agents'](https://developer.apple.com/library/mac/technotes/tn2083/_index.html)
+* [Apple 'Creating Launch Daemons and Agents'](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)
+* [Stackoverflow](http://stackoverflow.com/questions/6968677/cfnotificationcenter-usage-examples)
