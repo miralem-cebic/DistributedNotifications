@@ -27,4 +27,4 @@ echo "\n"
 echo "--------------"
 echo "->REMOVING DIRECTORY at /Library/Application Support/MCC-DistributedNotifications"
 
-rm -Rf "/Library/Application Support/MCC-DistributedNotifications"
+sudo rm -Rf "/Library/Application Support/MCC-DistributedNotifications"
