@@ -6,6 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E7FDE5F21C6E1618000DCEB0 /* Daemons-Aggregater */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E7FDE5F31C6E1618000DCEB0 /* Build configuration list for PBXAggregateTarget "Daemons-Aggregater" */;
+			buildPhases = (
+				E7FDE5FA1C6E1628000DCEB0 /* ShellScript */,
+			);
+			dependencies = (
+				E7FDE5FC1C6E1A27000DCEB0 /* PBXTargetDependency */,
+				E7FDE5FE1C6E1A27000DCEB0 /* PBXTargetDependency */,
+			);
+			name = "Daemons-Aggregater";
+			productName = "Daemons-Aggregater";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		E7FDE5AE1C6DE0FD000DCEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */; };
 		E7FDE5B11C6DE0FD000DCEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5B01C6DE0FD000DCEB0 /* main.m */; };
@@ -26,6 +42,23 @@
 		E7FDE5EA1C6E0A42000DCEB0 /* Daemon.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */; };
 		E7FDE5F11C6E0E9C000DCEB0 /* uninstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7FDE5FB1C6E1A27000DCEB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7FDE58A1C6DE081000DCEB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7FDE5A91C6DE0FD000DCEB0;
+			remoteInfo = "LaunchAgent-Daemon";
+		};
+		E7FDE5FD1C6E1A27000DCEB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7FDE58A1C6DE081000DCEB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7FDE5BE1C6DE119000DCEB0;
+			remoteInfo = "LaunchDaemon-Daemon";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E7FDE5AA1C6DE0FD000DCEB0 /* LaunchAgent-Daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchAgent-Daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +295,9 @@
 					E7FDE5BE1C6DE119000DCEB0 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					E7FDE5F21C6E1618000DCEB0 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 				};
 			};
 			buildConfigurationList = E7FDE58D1C6DE081000DCEB0 /* Build configuration list for PBXProject "DistributedNotifications" */;
@@ -279,6 +315,7 @@
 			targets = (
 				E7FDE5A91C6DE0FD000DCEB0 /* LaunchAgent-Daemon */,
 				E7FDE5BE1C6DE119000DCEB0 /* LaunchDaemon-Daemon */,
+				E7FDE5F21C6E1618000DCEB0 /* Daemons-Aggregater */,
 			);
 		};
 /* End PBXProject section */
@@ -309,6 +346,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E7FDE5FA1C6E1628000DCEB0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#set\n\nDESTINATIONDIR=\"$HOME/Desktop/Daemon-Builds/\"\n\nif ! [ -d \"$DESTINATIONDIR\"]\nthen\nrm -Rf $DESTINATIONDIR\nfi\n\nmkdir $DESTINATIONDIR\n\necho -e \"\\n\\n---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||\\n\\n\"\n\ncd $PWD\ncd Install\n#ls -al\ncp \"de.miralem-cebic.launchagent.plist\" \"$DESTINATIONDIR/de.miralem-cebic.launchagent.plist\"\ncp \"de.miralem-cebic.launchdaemon.plist\" \"$DESTINATIONDIR/de.miralem-cebic.launchdaemon.plist\"\ncp \"install.sh\" \"$DESTINATIONDIR/install.sh\"\ncp \"uninstall.sh\" \"$DESTINATIONDIR/uninstall.sh\"\n\necho -e \"\\n\\n---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||---|||\\n\\n\"\n\ncd $TARGET_BUILD_DIR\n#ls -al\ncp -R \"LaunchAgent-Daemon.app\" \"$DESTINATIONDIR/LaunchAgent-Daemon.app\"\ncp -R \"LaunchDaemon-Daemon.app\" \"$DESTINATIONDIR/LaunchDaemon-Daemon.app\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E7FDE5A61C6DE0FD000DCEB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -334,6 +387,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7FDE5FC1C6E1A27000DCEB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7FDE5A91C6DE0FD000DCEB0 /* LaunchAgent-Daemon */;
+			targetProxy = E7FDE5FB1C6E1A27000DCEB0 /* PBXContainerItemProxy */;
+		};
+		E7FDE5FE1C6E1A27000DCEB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7FDE5BE1C6DE119000DCEB0 /* LaunchDaemon-Daemon */;
+			targetProxy = E7FDE5FD1C6E1A27000DCEB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E7FDE5B41C6DE0FD000DCEB0 /* MainMenu.xib */ = {
@@ -482,6 +548,20 @@
 			};
 			name = Release;
 		};
+		E7FDE5F41C6E1618000DCEB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E7FDE5F51C6E1618000DCEB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -507,6 +587,14 @@
 			buildConfigurations = (
 				E7FDE5CE1C6DE119000DCEB0 /* Debug */,
 				E7FDE5CF1C6DE119000DCEB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E7FDE5F31C6E1618000DCEB0 /* Build configuration list for PBXAggregateTarget "Daemons-Aggregater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7FDE5F41C6E1618000DCEB0 /* Debug */,
+				E7FDE5F51C6E1618000DCEB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
