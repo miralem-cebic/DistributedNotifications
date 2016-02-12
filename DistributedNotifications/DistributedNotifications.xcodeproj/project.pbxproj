@@ -15,6 +15,14 @@
 		E7FDE5C61C6DE119000DCEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5C51C6DE119000DCEB0 /* main.m */; };
 		E7FDE5C81C6DE119000DCEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5C71C6DE119000DCEB0 /* Assets.xcassets */; };
 		E7FDE5CB1C6DE119000DCEB0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5C91C6DE119000DCEB0 /* MainMenu.xib */; };
+		E7FDE5D21C6DE3A0000DCEB0 /* StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5D11C6DE3A0000DCEB0 /* StatusBar.m */; };
+		E7FDE5D71C6DE4D4000DCEB0 /* launch-daemon-18x18.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5D51C6DE4D4000DCEB0 /* launch-daemon-18x18.png */; };
+		E7FDE5D81C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5D61C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png */; };
+		E7FDE5DC1C6DE6F8000DCEB0 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5DB1C6DE6F8000DCEB0 /* LogManager.m */; };
+		E7FDE5DD1C6DE6FE000DCEB0 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5DB1C6DE6F8000DCEB0 /* LogManager.m */; };
+		E7FDE5E01C6DEBD9000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5DF1C6DEBD9000DCEB0 /* AppIcon.icns */; };
+		E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */; };
+		E7FDE5E61C6DEE1D000DCEB0 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,16 @@
 		E7FDE5C71C6DE119000DCEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7FDE5CA1C6DE119000DCEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E7FDE5CC1C6DE119000DCEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7FDE5D01C6DE3A0000DCEB0 /* StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusBar.h; path = StatusBar/StatusBar.h; sourceTree = "<group>"; };
+		E7FDE5D11C6DE3A0000DCEB0 /* StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusBar.m; path = StatusBar/StatusBar.m; sourceTree = "<group>"; };
+		E7FDE5D51C6DE4D4000DCEB0 /* launch-daemon-18x18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-daemon-18x18.png"; sourceTree = "<group>"; };
+		E7FDE5D61C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-daemon-18x18@2x.png"; sourceTree = "<group>"; };
+		E7FDE5DA1C6DE6F8000DCEB0 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
+		E7FDE5DB1C6DE6F8000DCEB0 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
+		E7FDE5DF1C6DEBD9000DCEB0 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		E7FDE5E41C6DEE1D000DCEB0 /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Panel.h; path = Panel/Panel.h; sourceTree = "<group>"; };
+		E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Panel.m; path = Panel/Panel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,7 @@
 		E7FDE5891C6DE080000DCEB0 = {
 			isa = PBXGroup;
 			children = (
+				E7FDE5DE1C6DE9C7000DCEB0 /* Frameworks */,
 				E7FDE5AB1C6DE0FD000DCEB0 /* LaunchAgent-Daemon */,
 				E7FDE5C01C6DE119000DCEB0 /* LaunchDaemon-Daemon */,
 				E7FDE5931C6DE081000DCEB0 /* Products */,
@@ -75,6 +94,9 @@
 			children = (
 				E7FDE5AC1C6DE0FD000DCEB0 /* AppDelegate.h */,
 				E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */,
+				E7FDE5E71C6DEE22000DCEB0 /* Panel */,
+				E7FDE5D31C6DE3A3000DCEB0 /* Status Bar */,
+				E7FDE5D41C6DE4D4000DCEB0 /* Imgages */,
 				E7FDE5B21C6DE0FD000DCEB0 /* Assets.xcassets */,
 				E7FDE5B41C6DE0FD000DCEB0 /* MainMenu.xib */,
 				E7FDE5B71C6DE0FD000DCEB0 /* Info.plist */,
@@ -96,6 +118,7 @@
 			children = (
 				E7FDE5C11C6DE119000DCEB0 /* AppDelegate.h */,
 				E7FDE5C21C6DE119000DCEB0 /* AppDelegate.m */,
+				E7FDE5E11C6DEC0D000DCEB0 /* images */,
 				E7FDE5C71C6DE119000DCEB0 /* Assets.xcassets */,
 				E7FDE5C91C6DE119000DCEB0 /* MainMenu.xib */,
 				E7FDE5CC1C6DE119000DCEB0 /* Info.plist */,
@@ -110,6 +133,59 @@
 				E7FDE5C51C6DE119000DCEB0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7FDE5D31C6DE3A3000DCEB0 /* Status Bar */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE5D01C6DE3A0000DCEB0 /* StatusBar.h */,
+				E7FDE5D11C6DE3A0000DCEB0 /* StatusBar.m */,
+			);
+			name = "Status Bar";
+			sourceTree = "<group>";
+		};
+		E7FDE5D41C6DE4D4000DCEB0 /* Imgages */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE5DF1C6DEBD9000DCEB0 /* AppIcon.icns */,
+				E7FDE5D51C6DE4D4000DCEB0 /* launch-daemon-18x18.png */,
+				E7FDE5D61C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png */,
+			);
+			path = Imgages;
+			sourceTree = "<group>";
+		};
+		E7FDE5D91C6DE6F8000DCEB0 /* LogManager */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE5DA1C6DE6F8000DCEB0 /* LogManager.h */,
+				E7FDE5DB1C6DE6F8000DCEB0 /* LogManager.m */,
+			);
+			path = LogManager;
+			sourceTree = "<group>";
+		};
+		E7FDE5DE1C6DE9C7000DCEB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE5D91C6DE6F8000DCEB0 /* LogManager */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7FDE5E11C6DEC0D000DCEB0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		E7FDE5E71C6DEE22000DCEB0 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				E7FDE5E41C6DEE1D000DCEB0 /* Panel.h */,
+				E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */,
+			);
+			name = Panel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7FDE5E01C6DEBD9000DCEB0 /* AppIcon.icns in Resources */,
 				E7FDE5B31C6DE0FD000DCEB0 /* Assets.xcassets in Resources */,
+				E7FDE5D71C6DE4D4000DCEB0 /* launch-daemon-18x18.png in Resources */,
+				E7FDE5D81C6DE4D4000DCEB0 /* launch-daemon-18x18@2x.png in Resources */,
 				E7FDE5B61C6DE0FD000DCEB0 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7FDE5C81C6DE119000DCEB0 /* Assets.xcassets in Resources */,
+				E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */,
 				E7FDE5CB1C6DE119000DCEB0 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7FDE5E61C6DEE1D000DCEB0 /* Panel.m in Sources */,
+				E7FDE5DC1C6DE6F8000DCEB0 /* LogManager.m in Sources */,
 				E7FDE5B11C6DE0FD000DCEB0 /* main.m in Sources */,
+				E7FDE5D21C6DE3A0000DCEB0 /* StatusBar.m in Sources */,
 				E7FDE5AE1C6DE0FD000DCEB0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7FDE5DD1C6DE6FE000DCEB0 /* LogManager.m in Sources */,
 				E7FDE5C61C6DE119000DCEB0 /* main.m in Sources */,
 				E7FDE5C31C6DE119000DCEB0 /* AppDelegate.m in Sources */,
 			);

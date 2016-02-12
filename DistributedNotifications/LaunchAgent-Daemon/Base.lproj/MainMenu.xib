@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -666,15 +667,58 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="LaunchAgent-Daemon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="LaunchAgent-Daemon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="83"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" doubleValue="34" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-wg-Pi5">
+                        <rect key="frame" x="20" y="19" width="440" height="20"/>
+                    </progressIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-gp-leW">
+                        <rect key="frame" x="18" y="46" width="444" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="It's working ..." id="7jV-ig-sx9">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
             </view>
+            <point key="canvasLocation" x="385" y="370.5"/>
         </window>
+        <menu id="BFi-ec-Cdw" userLabel="StatusBarMenu">
+            <items>
+                <menuItem title="About DistributedNotifications" id="6AR-cd-Jmd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="pressAbout:" target="cNl-pw-5YU" id="UlP-vM-qs8"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Rry-Bs-l2h"/>
+                <menuItem title="Do Something" id="mob-g1-zKk">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="pressDoSomething:" target="cNl-pw-5YU" id="1cU-LE-CZj"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="269" y="192.5"/>
+        </menu>
+        <customObject id="cNl-pw-5YU" customClass="StatusBar">
+            <connections>
+                <outlet property="statusMenu" destination="BFi-ec-Cdw" id="rUn-Mc-Jol"/>
+            </connections>
+        </customObject>
+        <customObject id="biM-Js-6ed" customClass="Panel">
+            <connections>
+                <outlet property="panel" destination="QvC-M9-y7g" id="cgm-gJ-9lm"/>
+                <outlet property="progress" destination="BlX-wg-Pi5" id="ES5-Dt-tBO"/>
+            </connections>
+        </customObject>
     </objects>
 </document>
