@@ -88,3 +88,4 @@ source: <br />
 * [Apple TN2083 'Daemons and Agents'](https://developer.apple.com/library/mac/technotes/tn2083/_index.html)
 * [Apple 'Creating Launch Daemons and Agents'](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)
 * [Stackoverflow](http://stackoverflow.com/questions/6968677/cfnotificationcenter-usage-examples)
+* [Icons](http://iconfactory.com/downloads/freeware/agap/)
