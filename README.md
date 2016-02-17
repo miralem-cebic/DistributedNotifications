@@ -4,10 +4,16 @@
 
 [](/builds/109846410)
 
-### Status
+## Status
 [![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/RabbitMC/DistributedNotifications)
 [![Coverage Status](https://coveralls.io/repos/github/RabbitMC/DistributedNotifications/badge.svg?branch=master)](https://coveralls.io/github/RabbitMC/DistributedNotifications?branch=master)
 [![Code Health](https://landscape.io/github/RabbitMC/DistributedNotifications/master/landscape.svg?style=flat)](https://landscape.io/github/RabbitMC/DistributedNotifications/master)
+[![Platform](http://img.shields.io/badge/platform-osx-lightgrey.svg?style=flat
+)](https://developer.apple.com/iphone/index.action)
+[![Language](http://img.shields.io/badge/language-objc-brightgreen.svg?style=flat
+)](https://developer.apple.com/swift)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
 
 One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
 
