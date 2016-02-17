@@ -93,18 +93,18 @@ echo "\n"
 echo "--------------"
 echo "->STARTING AGENTS"
 
-sudo launchctl load -w "/Library/LaunchAgents/de.miralem-cebic.launchagent.plist"
+launchctl load -w "/Library/LaunchAgents/de.miralem-cebic.launchagent.plist"
 if [ "$?" = "0" ]; then
-sudo launchctl load -w "/Library/LaunchAgents/de.miralem-cebic.launchagent.plist"
+launchctl load -w "/Library/LaunchAgents/de.miralem-cebic.launchagent.plist"
 else
 echo "Could not load de.miralem-cebic.launchagent.plist with launchctl." 1>&2
 "$CURRENTDIR/uninstall.sh"
 exit 42
 fi
 
-sudo launchctl load -w "sudo launchctl load -w /Library/LaunchDaemons/de.miralem-cebic.launchdaemon.plist"
+sudo launchctl load -w "/Library/LaunchDaemons/de.miralem-cebic.launchdaemon.plist"
 if [ "$?" = "0" ]; then
-sudo launchctl load -w "sudo launchctl load -w /Library/LaunchDaemons/de.miralem-cebic.launchdaemon.plist"
+sudo launchctl load -w "/Library/LaunchDaemons/de.miralem-cebic.launchdaemon.plist"
 else
 echo "Could not load de.miralem-cebic.launchdaemon.plist with launchctl." 1>&2
 "$CURRENTDIR/uninstall.sh"

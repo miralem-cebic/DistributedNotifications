@@ -11,7 +11,7 @@
 #import "LogManager.h"
 
 @interface Panel()
-@property (weak) IBOutlet NSPanel *panel;
+@property (weak) IBOutlet NSWindow *panel;
 @property (weak) IBOutlet NSProgressIndicator *progress;
 
 @end
@@ -54,9 +54,15 @@
     // sufficient to show the window.  We have to use -[NSWindow orderFrontRegardless].
     [self.panel orderFrontRegardless];
 
+
     [[LogManager sharedManager] logWithFormat:@"Display About Window"];
     
     [NSApp activateIgnoringOtherApps:YES];
+
+    self.progress.doubleValue = 0;
+    for (NSInteger i=0; i<4; ++i) {
+        self.progress.doubleValue += 1;
+    }
 }
 
 @end

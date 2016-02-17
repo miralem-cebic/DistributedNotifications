@@ -4,7 +4,7 @@
 
 DESTINATIONDIR="$HOME/Desktop/Daemon-Builds/"
 
-if ! [ -d "$DESTINATIONDIR" ]
+if [ -d "$DESTINATIONDIR" ]
 then
 rm -Rf $DESTINATIONDIR
 fi

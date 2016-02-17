@@ -10,6 +10,9 @@
 #import "LogManager.h"
 #import "NotificationsManager.h"
 
+@interface Daemon ()
+@end
+
 @implementation Daemon
 
 + (instancetype)sharedDaemon
@@ -27,6 +30,7 @@
     self = [super init];
     if (self) {
         [[LogManager sharedManager] logWithFormat:@"Daemon init"];
+
     }
     return self;
 }

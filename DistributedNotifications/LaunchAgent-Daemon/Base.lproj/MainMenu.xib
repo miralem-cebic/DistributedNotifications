@@ -14,8 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="panel" destination="biM-Js-6ed" id="Uc3-si-Oj6"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="panel" destination="biM-Js-6ed" id="eWo-0R-r1E"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -668,8 +667,8 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="LaunchAgent-Daemon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" userLabel="Panel" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
+        <window title="LaunchAgent-Daemon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" userLabel="Panel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="83"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -677,14 +676,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" doubleValue="34" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-wg-Pi5">
+                    <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="10" doubleValue="3" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-wg-Pi5">
                         <rect key="frame" x="20" y="19" width="440" height="20"/>
                     </progressIndicator>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-gp-leW">
                         <rect key="frame" x="18" y="46" width="444" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="It's working ..." id="7jV-ig-sx9">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -717,8 +716,8 @@
         </customObject>
         <customObject id="biM-Js-6ed" customClass="Panel">
             <connections>
-                <outlet property="panel" destination="QvC-M9-y7g" id="cgm-gJ-9lm"/>
-                <outlet property="progress" destination="BlX-wg-Pi5" id="ES5-Dt-tBO"/>
+                <outlet property="panel" destination="QvC-M9-y7g" id="hch-f3-R3z"/>
+                <outlet property="progress" destination="BlX-wg-Pi5" id="FfF-W5-LBl"/>
             </connections>
         </customObject>
     </objects>

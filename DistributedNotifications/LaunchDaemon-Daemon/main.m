@@ -16,6 +16,7 @@ int main(int argc, const char * argv[]) {
     [[LogManager sharedManager] logWithFormat:@"LaunchDaemon-Daemon"];
 
     [[LogManager sharedManager] logWithFormat:@"Starting LaunchDaemon-Daemon Cocoa application"];
+    [Daemon sharedDaemon];
 
     [[NotificationsManager sharedInstance] registerForNotificationName:@"kLaunchAgentPostPressAbout" callback:^{
 
@@ -23,6 +24,19 @@ int main(int argc, const char * argv[]) {
         [[Daemon sharedDaemon] showAboutAgentInformation];
     }];
 
-    CFRunLoopRun();
+//    CFRunLoopRun();
+//    [[NSRunLoop mainRunLoop] run];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:60
+                                             target:[Daemon sharedDaemon]
+                                           selector:@selector(showAboutAgentInformation)
+                                           userInfo:nil
+                                            repeats:YES];
+
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    [runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
+    [runLoop run];
+
+
+    return NSApplicationMain(argc, argv);
     return 0;
 }
