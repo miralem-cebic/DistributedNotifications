@@ -1,4 +1,6 @@
-language: objective-c
-osx_image: xcode7.2
-xcode_project: DistributedNotifications/DistributedNotifications.xcodeproj # path to your xcodeproj folder
-xcode_scheme: Daemons-Aggregater
+service_name: travis-ci
+
+#language: objective-c
+#osx_image: xcode7.2
+#xcode_project: DistributedNotifications/DistributedNotifications.xcodeproj # path to your xcodeproj folder
+#xcode_scheme: Daemons-Aggregater
