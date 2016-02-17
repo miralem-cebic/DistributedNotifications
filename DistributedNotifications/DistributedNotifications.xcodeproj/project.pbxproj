@@ -11,7 +11,6 @@
 		E73693571C748BD900D311DE /* NotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E73693551C748BD500D311DE /* NotificationsManager.m */; };
 		E73693601C749D6200D311DE /* LaunchAgent_DaemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E736935F1C749D6200D311DE /* LaunchAgent_DaemonTests.m */; };
 		E736936E1C749D9600D311DE /* LaunchDaemon_DaemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E736936D1C749D9600D311DE /* LaunchDaemon_DaemonTests.m */; };
-		E73693761C74AD2200D311DE /* aggregator.sh in Resources */ = {isa = PBXBuildFile; fileRef = E73693751C74AD2200D311DE /* aggregator.sh */; };
 		E7FDE5AE1C6DE0FD000DCEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */; };
 		E7FDE5B11C6DE0FD000DCEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5B01C6DE0FD000DCEB0 /* main.m */; };
 		E7FDE5B31C6DE0FD000DCEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5B21C6DE0FD000DCEB0 /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 		E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5E21C6DEC0D000DCEB0 /* AppIcon.icns */; };
 		E7FDE5E61C6DEE1D000DCEB0 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E51C6DEE1D000DCEB0 /* Panel.m */; };
 		E7FDE5EA1C6E0A42000DCEB0 /* Daemon.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5E91C6E0A42000DCEB0 /* Daemon.m */; };
-		E7FDE5F11C6E0E9C000DCEB0 /* uninstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5F01C6E0E9C000DCEB0 /* uninstall.sh */; };
 		E7FDE6041C6E596E000DCEB0 /* launch-daemon-18x18.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE6011C6E596E000DCEB0 /* launch-daemon-18x18.png */; };
 		E7FDE6051C6E596E000DCEB0 /* launch-daemon-18x18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE6021C6E596E000DCEB0 /* launch-daemon-18x18@2x.png */; };
 /* End PBXBuildFile section */
@@ -417,7 +415,6 @@
 			files = (
 				E7FDE5B31C6DE0FD000DCEB0 /* Assets.xcassets in Resources */,
 				E7FDE6041C6E596E000DCEB0 /* launch-daemon-18x18.png in Resources */,
-				E73693761C74AD2200D311DE /* aggregator.sh in Resources */,
 				E7FDE5B61C6DE0FD000DCEB0 /* MainMenu.xib in Resources */,
 				E7FDE6051C6E596E000DCEB0 /* launch-daemon-18x18@2x.png in Resources */,
 			);
@@ -429,7 +426,6 @@
 			files = (
 				E7FDE5C81C6DE119000DCEB0 /* Assets.xcassets in Resources */,
 				E7FDE5E31C6DEC0D000DCEB0 /* AppIcon.icns in Resources */,
-				E7FDE5F11C6E0E9C000DCEB0 /* uninstall.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
