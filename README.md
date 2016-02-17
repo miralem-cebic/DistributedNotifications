@@ -7,6 +7,7 @@
 ### Status
 [![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/RabbitMC/DistributedNotifications)
 [![Coverage Status](https://coveralls.io/repos/github/RabbitMC/DistributedNotifications/badge.svg?branch=master)](https://coveralls.io/github/RabbitMC/DistributedNotifications?branch=master)
+[![Code Health](https://landscape.io/github/RabbitMC/DistributedNotifications/master/landscape.svg?style=flat)](https://landscape.io/github/RabbitMC/DistributedNotifications/master)
 
 One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
 
