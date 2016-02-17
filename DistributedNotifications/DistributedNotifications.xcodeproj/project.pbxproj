@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E73693771C74FA5B00D311DE /* DaemonAggregator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E73693781C74FA5B00D311DE /* Build configuration list for PBXAggregateTarget "DaemonAggregator" */;
+			buildPhases = (
+			);
+			dependencies = (
+				E736937C1C74FA6300D311DE /* PBXTargetDependency */,
+				E736937E1C74FA6300D311DE /* PBXTargetDependency */,
+			);
+			name = DaemonAggregator;
+			productName = DaemonAggregator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		E73693561C748BD500D311DE /* NotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E73693551C748BD500D311DE /* NotificationsManager.m */; };
 		E73693571C748BD900D311DE /* NotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E73693551C748BD500D311DE /* NotificationsManager.m */; };
@@ -36,6 +51,20 @@
 			remoteInfo = "LaunchAgent-Daemon";
 		};
 		E73693701C749D9600D311DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7FDE58A1C6DE081000DCEB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7FDE5BE1C6DE119000DCEB0;
+			remoteInfo = "LaunchDaemon-Daemon";
+		};
+		E736937B1C74FA6300D311DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7FDE58A1C6DE081000DCEB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7FDE5A91C6DE0FD000DCEB0;
+			remoteInfo = "LaunchAgent-Daemon";
+		};
+		E736937D1C74FA6300D311DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E7FDE58A1C6DE081000DCEB0 /* Project object */;
 			proxyType = 1;
@@ -365,6 +394,9 @@
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = E7FDE5BE1C6DE119000DCEB0;
 					};
+					E73693771C74FA5B00D311DE = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					E7FDE5A91C6DE0FD000DCEB0 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -390,6 +422,7 @@
 				E7FDE5BE1C6DE119000DCEB0 /* LaunchDaemon-Daemon */,
 				E736935C1C749D6200D311DE /* LaunchAgent-DaemonTests */,
 				E736936A1C749D9600D311DE /* LaunchDaemon-DaemonTests */,
+				E73693771C74FA5B00D311DE /* DaemonAggregator */,
 			);
 		};
 /* End PBXProject section */
@@ -485,6 +518,16 @@
 			target = E7FDE5BE1C6DE119000DCEB0 /* LaunchDaemon-Daemon */;
 			targetProxy = E73693701C749D9600D311DE /* PBXContainerItemProxy */;
 		};
+		E736937C1C74FA6300D311DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7FDE5A91C6DE0FD000DCEB0 /* LaunchAgent-Daemon */;
+			targetProxy = E736937B1C74FA6300D311DE /* PBXContainerItemProxy */;
+		};
+		E736937E1C74FA6300D311DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7FDE5BE1C6DE119000DCEB0 /* LaunchDaemon-Daemon */;
+			targetProxy = E736937D1C74FA6300D311DE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -548,6 +591,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.miralem-cebic.LaunchDaemon-DaemonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaunchDaemon-Daemon.app/Contents/MacOS/LaunchDaemon-Daemon";
+			};
+			name = Release;
+		};
+		E73693791C74FA5B00D311DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E736937A1C74FA5B00D311DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -694,6 +751,14 @@
 			buildConfigurations = (
 				E73693731C749D9600D311DE /* Debug */,
 				E73693741C749D9600D311DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E73693781C74FA5B00D311DE /* Build configuration list for PBXAggregateTarget "DaemonAggregator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73693791C74FA5B00D311DE /* Debug */,
+				E736937A1C74FA5B00D311DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
