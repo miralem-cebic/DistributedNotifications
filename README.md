@@ -2,7 +2,7 @@
 ![MacDown logo](DistributedNotifications/LaunchAgent-Daemon/Assets.xcassets/AppIcon.appiconset/Icon_128x128.png)
 ![MacDown logo](DistributedNotifications/LaunchDaemon-Daemon/Assets.xcassets/AppIcon.appiconset/Icon_128x128.png)
 
-[](/builds/109846410)
+![MacDown logo](Screenshots/Explain.png)
 
 ## Status
 [![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/RabbitMC/DistributedNotifications)
