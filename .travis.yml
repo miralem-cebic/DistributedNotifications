@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode7.2
 xcode_project: DistributedNotifications/DistributedNotifications.xcodeproj # path to your xcodeproj folder
-xcode_scheme: Daemons-Aggregater
+xcode_scheme: LaunchAgent-Daemon, LaunchDaemon-Daemon
 
 after_success:
   - run-tests
