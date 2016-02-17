@@ -10,6 +10,8 @@
 
 @interface Daemon : NSObject
 
++ (instancetype)sharedDaemon;
+
 /**
  *  This method will return About Information to LaunchAgent via Notification
  */

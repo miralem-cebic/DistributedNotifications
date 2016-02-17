@@ -11,6 +11,16 @@
 
 @implementation Daemon
 
++ (instancetype)sharedDaemon
+{
+    static Daemon *sharedDaemon = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedDaemon = [[self alloc] init];
+    });
+    return sharedDaemon;
+}
+
 - (instancetype)init
 {
     self = [super init];
