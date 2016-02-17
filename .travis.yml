@@ -4,6 +4,4 @@ xcode_project: DistributedNotifications/DistributedNotifications.xcodeproj # pat
 xcode_scheme: Daemons-Aggregater
 
 after_success:
-  - coveralls
-  - build-tests
   - run-tests
