@@ -2,6 +2,12 @@
 ![MacDown logo](DistributedNotifications/LaunchAgent-Daemon/Assets.xcassets/AppIcon.appiconset/Icon_128x128.png)
 ![MacDown logo](DistributedNotifications/LaunchDaemon-Daemon/Assets.xcassets/AppIcon.appiconset/Icon_128x128.png)
 
+[](/builds/109846410)
+
+### Status
+[![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/RabbitMC/DistributedNotifications)
+[![Coverage Status](https://coveralls.io/repos/github/RabbitMC/DistributedNotifications/badge.svg?branch=master)](https://coveralls.io/github/RabbitMC/DistributedNotifications?branch=master)
+
 One daemon is a LaunchAgent daemon, who runs as an Agent in OS X status bar.
 
 The second daemon is running in the background as a LaunchDaemon.

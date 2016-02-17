@@ -23,9 +23,6 @@ int main(int argc, const char * argv[]) {
         [[Daemon sharedDaemon] showAboutAgentInformation];
     }];
 
-
-    [[LogManager sharedManager] logWithFormat:@"Cocoa application returned!?"];
-
     CFRunLoopRun();
     return 0;
 }
