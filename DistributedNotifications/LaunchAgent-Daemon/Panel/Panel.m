@@ -29,14 +29,14 @@
 
 - (void)awakeFromNib
 {
-    [[LogManager sharedManager] logWithFormat:@"Awake"];
+    [[LogManager sharedManager] logWithFormat:@"Panel Awake"];
 
     return;
 }
 
 - (void)showAboutWindowWithInformation:(NSDictionary *)aboutInformation
 {
-    [[LogManager sharedManager] logWithFormat:@"Show About Window"];
+    [[LogManager sharedManager] logWithFormat:@"Panel Show About Window"];
 
     [self.panel makeKeyAndOrderFront:self];
 

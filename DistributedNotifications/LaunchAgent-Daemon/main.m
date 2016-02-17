@@ -16,33 +16,33 @@ static void WaitForWindowServerSession(void)
 // However, I've left it in, and the option to enable it, to give me the
 // flexibility to test this edge case.
 {
-    [[LogManager sharedManager] logWithFormat:@"Waiting for window server session begin"];
+    [[LogManager sharedManager] logWithFormat:@"2- Waiting for window server session begin"];
 
     do {
-        NSDictionary *  sessionDict;
+        NSDictionary *sessionDict;
 
         sessionDict = CFBridgingRelease( CGSessionCopyCurrentDictionary() );
         if (sessionDict != nil) {
             break;
         }
 
-        [[LogManager sharedManager] logWithFormat:@"No window server session, wait"];
+        [[LogManager sharedManager] logWithFormat:@"3- No window server session, wait"];
         sleep(1);
     } while (YES);
 
-    [[LogManager sharedManager] logWithFormat:@"Waiting for window server session end"];
+    [[LogManager sharedManager] logWithFormat:@"4- Waiting for window server session end"];
 }
 
 int main(int argc, const char * argv[]) {
 
-    [[LogManager sharedManager] logWithFormat:@"LaunchAgent-Daemon"];
+    [[LogManager sharedManager] logWithFormat:@"1- LaunchAgent-Daemon"];
 
-    
+
     WaitForWindowServerSession();
     //InstallHandleSIGTERMFromRunLoop();
 
 
-    [[LogManager sharedManager] logWithFormat:@"Starting LaunchAgent-Daemon Cocoa application"];
+    [[LogManager sharedManager] logWithFormat:@"5- Starting LaunchAgent-Daemon Cocoa application"];
     int retVal = NSApplicationMain(argc, (const char **) argv);
     [[LogManager sharedManager] logWithFormat:@"Cocoa application returned!?"];
 

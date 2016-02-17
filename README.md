@@ -10,7 +10,9 @@ The goal is that the two daemons communicate trouth Notification with each other
 Also the first Daemon should display a UI in OS X Login Window.
 
 ## How To Build
-Clone the project on a OS X 10.11 machine via terminal `git clone https://github.com/RabbitMC/DistributedNotifications.git`.
+Clone the project on a OS X 10.11 machine via terminal:
+
+`git clone https://github.com/RabbitMC/DistributedNotifications.git`.
 
 Open *DistributedNotifications.xcodeproj*
 
@@ -89,3 +91,4 @@ source: <br />
 * [Apple 'Creating Launch Daemons and Agents'](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)
 * [Stackoverflow](http://stackoverflow.com/questions/6968677/cfnotificationcenter-usage-examples)
 * [Icons](http://iconfactory.com/downloads/freeware/agap/)
+* [CodeSnippets](http://stackoverflow.com/questions/26637023/how-to-properly-use-cfnotificationcenteraddobserver-in-swift-for-ios)

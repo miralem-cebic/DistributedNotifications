@@ -8,6 +8,7 @@
 
 #import "Daemon.h"
 #import "LogManager.h"
+#import "NotificationsManager.h"
 
 @implementation Daemon
 
@@ -33,16 +34,6 @@
 - (void)showAboutEmpirumAgentInformation;
 {
     [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
-
-    void *object;
-    CFDictionaryRef userInfo;
-
-    CFNotificationCenterRef distributedCenter = CFNotificationCenterGetDistributedCenter();
-    CFNotificationCenterPostNotification(distributedCenter,
-                                         CFSTR("kLaunchAgentShowAboutWindowNOW.miralem-cebic.de"),
-                                         object,
-                                         userInfo,
-                                         true);
 }
 
 @end

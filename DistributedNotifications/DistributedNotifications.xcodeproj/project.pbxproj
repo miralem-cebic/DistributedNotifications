@@ -23,6 +23,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		E73693561C748BD500D311DE /* NotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E73693551C748BD500D311DE /* NotificationsManager.m */; };
+		E73693571C748BD900D311DE /* NotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E73693551C748BD500D311DE /* NotificationsManager.m */; };
 		E7FDE5AE1C6DE0FD000DCEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */; };
 		E7FDE5B11C6DE0FD000DCEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5B01C6DE0FD000DCEB0 /* main.m */; };
 		E7FDE5B31C6DE0FD000DCEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5B21C6DE0FD000DCEB0 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E73693541C748BD500D311DE /* NotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationsManager.h; path = NotificationsManager/NotificationsManager.h; sourceTree = "<group>"; };
+		E73693551C748BD500D311DE /* NotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationsManager.m; path = NotificationsManager/NotificationsManager.m; sourceTree = "<group>"; };
 		E7FDE5AA1C6DE0FD000DCEB0 /* LaunchAgent-Daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchAgent-Daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FDE5AC1C6DE0FD000DCEB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E73693581C748CD100D311DE /* NotificationsManager */ = {
+			isa = PBXGroup;
+			children = (
+				E73693541C748BD500D311DE /* NotificationsManager.h */,
+				E73693551C748BD500D311DE /* NotificationsManager.m */,
+			);
+			name = NotificationsManager;
+			sourceTree = "<group>";
+		};
 		E7FDE5891C6DE080000DCEB0 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				E7FDE5D91C6DE6F8000DCEB0 /* LogManager */,
+				E73693581C748CD100D311DE /* NotificationsManager */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -356,6 +370,7 @@
 			files = (
 				E7FDE5E61C6DEE1D000DCEB0 /* Panel.m in Sources */,
 				E7FDE5DC1C6DE6F8000DCEB0 /* LogManager.m in Sources */,
+				E73693561C748BD500D311DE /* NotificationsManager.m in Sources */,
 				E7FDE5B11C6DE0FD000DCEB0 /* main.m in Sources */,
 				E7FDE5D21C6DE3A0000DCEB0 /* StatusBar.m in Sources */,
 				E7FDE5AE1C6DE0FD000DCEB0 /* AppDelegate.m in Sources */,
@@ -368,6 +383,7 @@
 			files = (
 				E7FDE5DD1C6DE6FE000DCEB0 /* LogManager.m in Sources */,
 				E7FDE5C61C6DE119000DCEB0 /* main.m in Sources */,
+				E73693571C748BD900D311DE /* NotificationsManager.m in Sources */,
 				E7FDE5EA1C6E0A42000DCEB0 /* Daemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -143,10 +143,10 @@
     
     dispatch_once(&sOnceToken, ^{
         // Change the following to log via ASL (the default) or NSLog.
-        if (YES) {
+        if (!YES) {
             sLogManager = [[ASLLogManager alloc] init];
         } else {
-            //sLogManager = [[NSLogManager alloc] init];
+            sLogManager = [[NSLogManager alloc] init];
         }
     });
     return sLogManager;
