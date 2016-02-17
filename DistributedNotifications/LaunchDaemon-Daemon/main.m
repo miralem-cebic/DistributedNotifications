@@ -17,7 +17,12 @@ int main(int argc, const char * argv[]) {
 
     [[LogManager sharedManager] logWithFormat:@"Starting LaunchDaemon-Daemon Cocoa application"];
 
-    [Daemon sharedDaemon];
+    [[NotificationsManager sharedInstance] registerForNotificationName:@"kLaunchAgentPostPressAbout" callback:^{
+
+        [[LogManager sharedManager] logWithFormat:@"Recevied Notification kLaunchAgentPostPressAbout"];
+        [[Daemon sharedDaemon] showAboutAgentInformation];
+    }];
+
 
     [[LogManager sharedManager] logWithFormat:@"Cocoa application returned!?"];
 

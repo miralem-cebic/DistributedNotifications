@@ -48,6 +48,8 @@
 {
     [[LogManager sharedManager] logWithFormat:@"Status Bar Clicked: 'About'"];
     [[LogManager sharedManager] logWithFormat:@"Sending Notification to LaunchDaemon ... "];
+
+    [[NotificationsManager sharedInstance] postNotificationWithName:@"kLaunchAgentPostPressAbout"];
 }
 
 - (IBAction)pressDoSomething:(NSMenuItem *)sender

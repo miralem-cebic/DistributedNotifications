@@ -22,7 +22,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     [[LogManager sharedManager] logWithFormat:@"6- Did finish launching begin"];
-    [self addCFNotificationCenterObserver];
+    
+    [[NotificationsManager sharedInstance] registerForNotificationName:@"kLaunchDaemonShowAboutAgentInforamtion" callback:^{
+        [self.panel showAboutWindowWithInformation:nil];
+    }];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)note

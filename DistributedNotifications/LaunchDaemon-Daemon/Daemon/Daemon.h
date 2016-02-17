@@ -15,6 +15,6 @@
 /**
  *  This method will return About Information to LaunchAgent via Notification
  */
-- (void)showAboutEmpirumAgentInformation;
+- (void)showAboutAgentInformation;
 
 @end

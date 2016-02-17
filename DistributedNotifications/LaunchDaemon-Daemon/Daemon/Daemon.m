@@ -31,9 +31,11 @@
     return self;
 }
 
-- (void)showAboutEmpirumAgentInformation;
+- (void)showAboutAgentInformation
 {
     [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
+
+    [[NotificationsManager sharedInstance] postNotificationWithName:@"kLaunchDaemonShowAboutAgentInforamtion"];
 }
 
 @end

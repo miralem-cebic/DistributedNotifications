@@ -30,8 +30,6 @@
 - (void)awakeFromNib
 {
     [[LogManager sharedManager] logWithFormat:@"Panel Awake"];
-
-    return;
 }
 
 - (void)showAboutWindowWithInformation:(NSDictionary *)aboutInformation
