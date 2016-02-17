@@ -35,7 +35,7 @@
 {
     [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
 
-    [[NotificationsManager sharedInstance] postNotificationWithName:@"kLaunchDaemonShowAboutAgentInforamtion"];
+    [[NotificationsManager sharedInstance] postNotificationWithName:@"kLaunchDaemonShowAboutAgentInformation"];
 }
 
 @end

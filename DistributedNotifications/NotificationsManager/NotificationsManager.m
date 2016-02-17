@@ -7,6 +7,7 @@
 //
 
 #import "NotificationsManager.h"
+#import "LogManager.h"
 
 @interface NotificationsManager ()
 @property (nonatomic, strong) NSMutableDictionary *dictHandlers;
@@ -29,6 +30,7 @@
     self = [super init];
     if (self) {
         _dictHandlers = [NSMutableDictionary dictionary];
+        [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
     }
     return self;
 }
@@ -37,19 +39,30 @@
 {
     _dictHandlers[name] = callback;
     CFNotificationCenterRef center = CFNotificationCenterGetDarwinNotifyCenter();
-    CFNotificationCenterAddObserver(center, (__bridge const void *)(self), defaultNotificationCallback, (__bridge CFStringRef)name, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(center,
+                                    (__bridge const void *)(self),
+                                    defaultNotificationCallback,
+                                    (__bridge CFStringRef)name,
+                                    NULL,
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+
+    [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
 }
 
 - (void)postNotificationWithName:(NSString *)name
 {
     CFNotificationCenterRef center = CFNotificationCenterGetDarwinNotifyCenter();
     CFNotificationCenterPostNotification(center, (__bridge CFStringRef)name, NULL, NULL, YES);
+
+    [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
 }
 
 - (void)notificationCallbackReceivedWithName:(NSString *)name
 {
     void (^callback)(void) = _dictHandlers[name];
     callback();
+
+    [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
 }
 
 void defaultNotificationCallback (CFNotificationCenterRef center,
@@ -58,8 +71,8 @@ void defaultNotificationCallback (CFNotificationCenterRef center,
                                   const void *object,
                                   CFDictionaryRef userInfo)
 {
-    NSLog(@"name: %@", name);
-    NSLog(@"userinfo: %@", userInfo);
+    [[LogManager sharedManager] logWithFormat:@"%s", __PRETTY_FUNCTION__];
+    [[LogManager sharedManager] logWithFormat:@"Name: %@, userinfo: %@", name, userInfo];
 
     NSString *identifier = (__bridge NSString *)name;
     [[NotificationsManager sharedInstance] notificationCallbackReceivedWithName:identifier];

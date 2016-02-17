@@ -23,7 +23,7 @@
     // Insert code here to initialize your application
     [[LogManager sharedManager] logWithFormat:@"6- Did finish launching begin"];
     
-    [[NotificationsManager sharedInstance] registerForNotificationName:@"kLaunchDaemonShowAboutAgentInforamtion" callback:^{
+    [[NotificationsManager sharedInstance] registerForNotificationName:@"kLaunchDaemonShowAboutAgentInformation" callback:^{
         [self.panel showAboutWindowWithInformation:nil];
     }];
 }
