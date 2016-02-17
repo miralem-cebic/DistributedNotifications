@@ -26,6 +26,7 @@
 		E73693561C748BD500D311DE /* NotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E73693551C748BD500D311DE /* NotificationsManager.m */; };
 		E73693571C748BD900D311DE /* NotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E73693551C748BD500D311DE /* NotificationsManager.m */; };
 		E73693601C749D6200D311DE /* LaunchAgent_DaemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E736935F1C749D6200D311DE /* LaunchAgent_DaemonTests.m */; };
+		E736936E1C749D9600D311DE /* LaunchDaemon_DaemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E736936D1C749D9600D311DE /* LaunchDaemon_DaemonTests.m */; };
 		E7FDE5AE1C6DE0FD000DCEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */; };
 		E7FDE5B11C6DE0FD000DCEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDE5B01C6DE0FD000DCEB0 /* main.m */; };
 		E7FDE5B31C6DE0FD000DCEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FDE5B21C6DE0FD000DCEB0 /* Assets.xcassets */; };
@@ -51,6 +52,13 @@
 			remoteGlobalIDString = E7FDE5A91C6DE0FD000DCEB0;
 			remoteInfo = "LaunchAgent-Daemon";
 		};
+		E73693701C749D9600D311DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7FDE58A1C6DE081000DCEB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7FDE5BE1C6DE119000DCEB0;
+			remoteInfo = "LaunchDaemon-Daemon";
+		};
 		E7FDE5FB1C6E1A27000DCEB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E7FDE58A1C6DE081000DCEB0 /* Project object */;
@@ -73,6 +81,9 @@
 		E736935D1C749D6200D311DE /* LaunchAgent-DaemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LaunchAgent-DaemonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E736935F1C749D6200D311DE /* LaunchAgent_DaemonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAgent_DaemonTests.m; sourceTree = "<group>"; };
 		E73693611C749D6200D311DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E736936B1C749D9600D311DE /* LaunchDaemon-DaemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LaunchDaemon-DaemonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E736936D1C749D9600D311DE /* LaunchDaemon_DaemonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchDaemon_DaemonTests.m; sourceTree = "<group>"; };
+		E736936F1C749D9600D311DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FDE5AA1C6DE0FD000DCEB0 /* LaunchAgent-Daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchAgent-Daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FDE5AC1C6DE0FD000DCEB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7FDE5AD1C6DE0FD000DCEB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +114,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		E736935A1C749D6200D311DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E73693681C749D9600D311DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,11 +162,21 @@
 			path = "LaunchAgent-DaemonTests";
 			sourceTree = "<group>";
 		};
+		E736936C1C749D9600D311DE /* LaunchDaemon-DaemonTests */ = {
+			isa = PBXGroup;
+			children = (
+				E736936D1C749D9600D311DE /* LaunchDaemon_DaemonTests.m */,
+				E736936F1C749D9600D311DE /* Info.plist */,
+			);
+			path = "LaunchDaemon-DaemonTests";
+			sourceTree = "<group>";
+		};
 		E7FDE5891C6DE080000DCEB0 = {
 			isa = PBXGroup;
 			children = (
 				E7FDE5ED1C6E0D70000DCEB0 /* Install */,
 				E736935E1C749D6200D311DE /* LaunchAgent-DaemonTests */,
+				E736936C1C749D9600D311DE /* LaunchDaemon-DaemonTests */,
 				E7FDE5DE1C6DE9C7000DCEB0 /* Frameworks */,
 				E7FDE5AB1C6DE0FD000DCEB0 /* LaunchAgent-Daemon */,
 				E7FDE5C01C6DE119000DCEB0 /* LaunchDaemon-Daemon */,
@@ -162,6 +190,7 @@
 				E7FDE5AA1C6DE0FD000DCEB0 /* LaunchAgent-Daemon.app */,
 				E7FDE5BF1C6DE119000DCEB0 /* LaunchDaemon-Daemon.app */,
 				E736935D1C749D6200D311DE /* LaunchAgent-DaemonTests.xctest */,
+				E736936B1C749D9600D311DE /* LaunchDaemon-DaemonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,6 +325,24 @@
 			productReference = E736935D1C749D6200D311DE /* LaunchAgent-DaemonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E736936A1C749D9600D311DE /* LaunchDaemon-DaemonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E73693721C749D9600D311DE /* Build configuration list for PBXNativeTarget "LaunchDaemon-DaemonTests" */;
+			buildPhases = (
+				E73693671C749D9600D311DE /* Sources */,
+				E73693681C749D9600D311DE /* Frameworks */,
+				E73693691C749D9600D311DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E73693711C749D9600D311DE /* PBXTargetDependency */,
+			);
+			name = "LaunchDaemon-DaemonTests";
+			productName = "LaunchDaemon-DaemonTests";
+			productReference = E736936B1C749D9600D311DE /* LaunchDaemon-DaemonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E7FDE5A91C6DE0FD000DCEB0 /* LaunchAgent-Daemon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7FDE5B81C6DE0FD000DCEB0 /* Build configuration list for PBXNativeTarget "LaunchAgent-Daemon" */;
@@ -343,6 +390,10 @@
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = E7FDE5A91C6DE0FD000DCEB0;
 					};
+					E736936A1C749D9600D311DE = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = E7FDE5BE1C6DE119000DCEB0;
+					};
 					E7FDE5A91C6DE0FD000DCEB0 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -371,12 +422,20 @@
 				E7FDE5BE1C6DE119000DCEB0 /* LaunchDaemon-Daemon */,
 				E7FDE5F21C6E1618000DCEB0 /* Daemons-Aggregater */,
 				E736935C1C749D6200D311DE /* LaunchAgent-DaemonTests */,
+				E736936A1C749D9600D311DE /* LaunchDaemon-DaemonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E736935B1C749D6200D311DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E73693691C749D9600D311DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,6 +490,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E73693671C749D9600D311DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E736936E1C749D9600D311DE /* LaunchDaemon_DaemonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7FDE5A61C6DE0FD000DCEB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +529,11 @@
 			isa = PBXTargetDependency;
 			target = E7FDE5A91C6DE0FD000DCEB0 /* LaunchAgent-Daemon */;
 			targetProxy = E73693621C749D6200D311DE /* PBXContainerItemProxy */;
+		};
+		E73693711C749D9600D311DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7FDE5BE1C6DE119000DCEB0 /* LaunchDaemon-Daemon */;
+			targetProxy = E73693701C749D9600D311DE /* PBXContainerItemProxy */;
 		};
 		E7FDE5FC1C6E1A27000DCEB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -510,6 +582,32 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.miralem-cebic.LaunchAgent-DaemonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaunchAgent-Daemon.app/Contents/MacOS/LaunchAgent-Daemon";
+			};
+			name = Release;
+		};
+		E73693731C749D9600D311DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LaunchDaemon-DaemonTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.miralem-cebic.LaunchDaemon-DaemonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaunchDaemon-Daemon.app/Contents/MacOS/LaunchDaemon-Daemon";
+			};
+			name = Debug;
+		};
+		E73693741C749D9600D311DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LaunchDaemon-DaemonTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.miralem-cebic.LaunchDaemon-DaemonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaunchDaemon-Daemon.app/Contents/MacOS/LaunchDaemon-Daemon";
 			};
 			name = Release;
 		};
@@ -662,6 +760,14 @@
 			buildConfigurations = (
 				E73693651C749D6200D311DE /* Debug */,
 				E73693661C749D6200D311DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E73693721C749D9600D311DE /* Build configuration list for PBXNativeTarget "LaunchDaemon-DaemonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73693731C749D9600D311DE /* Debug */,
+				E73693741C749D9600D311DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
